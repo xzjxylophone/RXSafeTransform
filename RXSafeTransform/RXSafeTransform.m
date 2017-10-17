@@ -186,12 +186,12 @@
 
 + (NSArray *)transformArrayFromID:(id)object
 {
-    return [self transformArrayFromID:NSURLIsDirectoryKey defaultValue:[NSArray new]];
+    return [self transformArrayFromID:object defaultValue:[NSArray new]];
 }
 
 + (NSArray *)transformArrayFromID:(id)object defaultValue:(NSArray *)defaultValue
 {
-    return [self transformIDFromID:object resultCls:[NSNumber class] defaultValue:defaultValue];
+    return [self transformIDFromID:object resultCls:[NSArray class] defaultValue:defaultValue];
 
 }
 
@@ -202,7 +202,7 @@
 
 + (NSString *)transformStringFromID:(id)object defaultValue:(NSString *)defaultValue
 {
-    return [self transformIDFromID:object resultCls:[NSNumber class] defaultValue:defaultValue];
+    return [self transformIDFromID:object resultCls:[NSString class] defaultValue:defaultValue];
 }
 
 
